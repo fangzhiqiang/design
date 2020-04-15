@@ -21,4 +21,8 @@ npm run lint
 ```
 
 ### Customize configuration
+<<<<<<< HEAD
 See78787 [Configuration Reference](https://cli.vuejs.org/config/).121212121
+=======
+See78787 [Configuration Reference](https://cli.vuejs.org/config/).121212121
+>>>>>>> f79cc676b577d008cbf9cf2f6bc26f9a6281390c
