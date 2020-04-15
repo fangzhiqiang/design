@@ -1,0 +1,52 @@
+<template>
+  <div >
+    <div style=''>
+        <van-nav-bar  @click-left="onClickLeft" style='background-color: #f4f4f4;'
+        :title="title"
+        left-text="返回"
+        left-arrow
+        />
+        <van-tabs v-model="active" style='z-index:100'>
+          <van-tab title="首页" to='/goods/index'></van-tab>
+          <van-tab title="发布" to='/goods/add'></van-tab>
+          <van-tab title="管理" to='/goods/manage'></van-tab>
+          <van-tab title="订单" to='/goods/order'></van-tab>
+          <van-tab title="留言" to='/goods/chat'></van-tab>
+        </van-tabs>
+    </div>
+    <div style='margin-bottom: 60px;margin-top:15px;background-color: #f4f4f4 '>
+        <!-- <keep-alive><router-view :key="$route.fullPath" /></keep-alive> -->
+        <router-view />
+    </div>
+  </div>
+</template>
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript">
+    /*$(window).scroll(function(){
+        if($(window).scrollTop() >= 200){
+          alert('dsaas');
+        } 
+    });*/
+    export default{
+        data(){
+            return{
+                title:'二手商品交易',
+                active:0,
+                hide:1
+            }
+        },
+        methods:{
+            onClickLeft(){
+                this.$router.go(-1)
+            }
+        }
+    }
+    /*window.onscroll = function () {
+        // 获取窗口滚动的距离
+        var scrolDis = document.documentElement.scrollTop || document.body.scrollTop;
+        if(scrolDis=='50'){
+            
+        }
+    };*/
+    
+</script>
