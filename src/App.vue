@@ -22,6 +22,7 @@ body{
   padding:0;
   background-color: #f4f4f4
 }
+
 </style>
 <script type="text/javascript">
   export default{

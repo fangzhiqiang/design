@@ -87,7 +87,7 @@
                 <div style='font-size: 13px;text-align: center;margin-top:-5px'>留言</div>
             </div>
             <div style="float:right;margin-right:40px;margin-top:5px">
-                <van-button style='font-size:20px;' color="linear-gradient(to right, #aeefec, #dd2c00)" size='normal' round type="info">购&nbsp;买</van-button>
+                <van-button to='/goods/buy' style='font-size:20px;' color="linear-gradient(to right, #aeefec, #dd2c00)" size='normal' round type="info">购买商品</van-button>
             </div>
             
             
