@@ -32,7 +32,8 @@
             return{
                 title:'二手商品交易',
                 active:0,
-                hide:1
+                hide:1,
+                name:'',
             }
         },
         methods:{
