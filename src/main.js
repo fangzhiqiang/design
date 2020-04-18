@@ -5,6 +5,9 @@ import store from './store'
 
 import 'vant/lib/index.css';
 import Vant from 'vant';
+import thor from 'thor-x'
+import 'thor-x/dist/index.css'
+Vue.use(thor)
 Vue.config.productionTip = false
 
 Vue.use(Vant);

@@ -10,6 +10,7 @@ import Details from '../views/Goods/Detail.vue'
 import Buy from '../views/Goods/Buy.vue'
 import Pay from '../views/Goods/Pay.vue'
 import Order_detail from '../views/Goods/Order_detail.vue'
+import Chat_detail from '../views/Goods/Chat_detail.vue'
 
 
 Vue.use(VueRouter)
@@ -63,6 +64,10 @@ Vue.use(VueRouter)
       {
         path:'order_detail',
         component:Order_detail
+      },
+      {
+        path:'chat_detail',
+        component:Chat_detail
       },
       {
         path:':id',
