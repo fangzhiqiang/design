@@ -3,7 +3,6 @@
     <van-divider :style="{ color: '#1989fa', borderColor: '#1989fa', padding: '0 16px' }">历史消息
     </van-divider>
     <div>
-        
         <div class='message' @click='skip'>
             <van-image
             width='60px' height='60px' radius='5px' fit="fill"

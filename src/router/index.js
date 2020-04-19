@@ -12,6 +12,13 @@ import Pay from '../views/Goods/Pay.vue'
 import Order_detail from '../views/Goods/Order_detail.vue'
 import Chat_detail from '../views/Goods/Chat_detail.vue'
 
+//互助页面
+import Help from '../views/Help.vue'
+import Hindex from '../views/Help/Index.vue'
+import Hdetail from '../views/Help/Hdetail.vue'
+import Hget from '../views/Help/Hget.vue'
+import Hadd from '../views/Help/Hadd.vue'
+import Hmanage from '../views/Help/Hmanage.vue'
 
 Vue.use(VueRouter)
   const routes = [
@@ -77,7 +84,33 @@ Vue.use(VueRouter)
     ]
   },
   //互助路由
-  
+  {
+    path:'/help',
+    component:Help,
+    children:[
+      {
+        path:'index',
+        component:Hindex
+      },
+      {
+        path:'get',
+        component:Hget
+      },
+      {
+        path:'add',
+        component:Hadd
+      },
+      {
+        path:'manage',
+        component:Hmanage
+      },
+      {
+        path:':id',
+        component:Hdetail
+      },
+
+    ]
+  }
 ]
 
 const router = new VueRouter({
