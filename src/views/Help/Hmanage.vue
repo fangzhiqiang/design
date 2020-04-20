@@ -50,9 +50,12 @@
 
 <style type="text/css" scoped>
 .goods-card {
-  margin-top:10px;
+  margin-top:0px;
   background-color: @white;
   margin-right:0px;
+}
+.van-swipe-cell{
+  margin-top:-7px;
 }
 
 .delete-button {

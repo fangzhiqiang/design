@@ -10,8 +10,8 @@
           <van-tab title="首页" to='/help/index'></van-tab>
           <van-tab title="发布" to='/help/add'></van-tab>
           <van-tab title="管理" to='/help/manage'></van-tab>
-          <van-tab title="我的任务" to='/help/order'></van-tab>
-          <van-tab title="留言" to='/help/chat'></van-tab>
+          <van-tab title="我的任务" to='/help/get'></van-tab>
+          <van-tab title="留言" to='/goods/chat'></van-tab>
         </van-tabs>
     </div>
     <div style='margin-bottom: 60px;background-color: #f4f4f4 '>
