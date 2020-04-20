@@ -22,6 +22,14 @@ import Hmanage from '../views/Help/Hmanage.vue'
 import Hchat from '../views/Help/Hchat.vue'
 import Hchat_detail from '../views/Help/Hchat_detail.vue'
 
+//活动页面
+import Aindex from '../views/Activity/Index.vue'
+import Activity from '../views/Activity.vue'
+import Act_detail from '../views/Activity/Act_detail.vue'
+import Luck from '../views/Activity/Luck.vue'
+
+
+
 Vue.use(VueRouter)
   const routes = [
   {
@@ -119,6 +127,26 @@ Vue.use(VueRouter)
         component:Hdetail
       },
 
+    ]
+  },
+
+  //活动路由
+  {
+    path:'/activity',
+    component:Activity,
+    children:[
+      {
+        path:'index',
+        component:Aindex
+      },
+      {
+        path:'luck',
+        component:Luck
+      },
+      {
+        path:':id',
+        component:Act_detail
+      },
     ]
   }
 ]

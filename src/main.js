@@ -5,9 +5,11 @@ import store from './store'
 
 import 'vant/lib/index.css';
 import Vant from 'vant';
-import thor from 'thor-x'
-import 'thor-x/dist/index.css'
-Vue.use(thor)
+
+import NutUI from '@nutui/nutui';
+import '@nutui/nutui/dist/nutui.css';
+NutUI.install(Vue);
+
 Vue.config.productionTip = false
 
 Vue.use(Vant);
