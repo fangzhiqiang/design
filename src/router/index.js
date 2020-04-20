@@ -19,6 +19,8 @@ import Hdetail from '../views/Help/Hdetail.vue'
 import Hget from '../views/Help/Hget.vue'
 import Hadd from '../views/Help/Hadd.vue'
 import Hmanage from '../views/Help/Hmanage.vue'
+import Hchat from '../views/Help/Hchat.vue'
+import Hchat_detail from '../views/Help/Hchat_detail.vue'
 
 Vue.use(VueRouter)
   const routes = [
@@ -103,6 +105,14 @@ Vue.use(VueRouter)
       {
         path:'manage',
         component:Hmanage
+      },
+      {
+        path:'chat',
+        component:Hchat
+      },
+      {
+        path:'Hchat_detail',
+        component:Hchat_detail
       },
       {
         path:':id',

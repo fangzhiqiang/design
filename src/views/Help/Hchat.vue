@@ -50,7 +50,7 @@
     export default{
         methods:{
             skip(){
-                this.$router.push('/goods/chat_detail')
+                this.$router.push('/help/Hchat_detail')
             }
         }
     }
