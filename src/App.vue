@@ -9,7 +9,7 @@
     <van-tabbar-item icon="shop-o" to='/goods/index'>闲置</van-tabbar-item>
     <van-tabbar-item icon="friends-o" to='/help/index'>互助</van-tabbar-item>
     <van-tabbar-item icon="fire-o" to='/activity/index'>活动</van-tabbar-item>
-    <van-tabbar-item icon="newspaper-o">招聘</van-tabbar-item>
+    <van-tabbar-item icon="newspaper-o" to='/recruit/index'>招聘</van-tabbar-item>
     <van-tabbar-item icon="setting-o">管理</van-tabbar-item>
    </van-tabbar>
    
@@ -22,6 +22,7 @@ body{
   padding:0;
   background-color: #f4f4f4
 }
+
 
 </style>
 <script type="text/javascript">

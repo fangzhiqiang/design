@@ -27,6 +27,15 @@ import Aindex from '../views/Activity/Index.vue'
 import Activity from '../views/Activity.vue'
 import Act_detail from '../views/Activity/Act_detail.vue'
 import Luck from '../views/Activity/Luck.vue'
+import Aadd from '../views/Activity/Aadd.vue'
+import Amanage from '../views/Activity/Amanage.vue'
+import Resluck from '../views/Activity/Resluck.vue'
+import Ressign from '../views/Activity/Ressign.vue'
+
+//招聘s
+import r_index from '../views/Recruit/Index.vue'
+import Recruit from '../views/Recruit.vue'
+import Test from '../views/Test.vue'
 
 
 
@@ -39,7 +48,10 @@ Vue.use(VueRouter)
     
   },
   
-
+  {
+    path:'/test',
+    component:Test
+  },
   //二手交易路由
   {
     path: '/goods',
@@ -139,14 +151,43 @@ Vue.use(VueRouter)
         path:'index',
         component:Aindex
       },
+     
       {
         path:'luck',
         component:Luck
       },
       {
+        path:'add',
+        component:Aadd,
+      },
+      {
+        path:'manage',
+        component:Amanage,
+      },
+      {
+        path:'res_luck',
+        component:Resluck,
+      },
+      {
+        path:'res_sign',
+        component:Ressign,
+      },
+      
+      {
         path:':id',
         component:Act_detail
       },
+    ]
+  },
+
+  {
+    path:'/recruit',
+    component:Recruit,
+    children:[
+      {
+        path:'index',
+        component:r_index,
+      }
     ]
   }
 ]

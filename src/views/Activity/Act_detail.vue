@@ -72,33 +72,48 @@
             </template>
         </van-field>
     </div>
+    
     <div id='tag'>
-         <div style="margin-left:-20px">
-            <van-button @click='luck' style='font-size:16px;' color="linear-gradient(to right, #900c3f, #c70039)" size='small' round type="info">活动抽奖</van-button>
-        </div>
-         <div style="margin-left:50px">
-            <van-button @click='sign' style='font-size:16px;' color="linear-gradient(to right, #900c3f, #c70039)" size='small' round type="info">活动报名</van-button>
-        </div>
-        <div  @click='note' style='margin-left:80px'>
-            <img  style='margin-top:9px' width='25px' height='25px' src='../../assets/goods/chat.png'>
-            <div style='font-size: 13px;text-align: center;margin-top:-5px'>留言</div>
-        </div>
-       
-
-
+       <div style="margin-left:-20px">
+        <van-button @click='luck' style='font-size:16px;' color="linear-gradient(to right, #900c3f, #c70039)" size='small' round type="info">活动抽奖</van-button>
     </div>
+    <div style="margin-left:50px">
+        <van-button @click='sign' style='font-size:16px;' color="linear-gradient(to right, #900c3f, #c70039)" size='small' round type="info">活动报名</van-button>
+    </div>
+    <div  @click='note' style='margin-left:80px'>
+        <img  style='margin-top:9px' width='25px' height='25px' src='../../assets/goods/chat.png'>
+        <div style='font-size: 13px;text-align: center;margin-top:-5px'>留言</div>
+    </div>
+</div>
+<van-popup v-model="show" position="bottom" :style="{ height: '35%'}">
+    <van-cell-group style='padding:20px;margin-top:20px'>
+        <van-field v-model="value" label='姓名' placeholder="请输入姓名" />
+        <van-field
+        v-model="sms"
+        center
+        clearable
+        label="短信验证码"
+        placeholder="请输入短信验证码"
+        >
+        <template #button>
+            <van-button size="small" type="primary">发送验证码</van-button>
+        </template>
+    </van-field>
+</van-cell-group>
+<van-button round type="info" block style='margin:auto;width:80%' color='#6983aa' @click='onSubmit'>确认报名</van-button>
+</van-popup>
 </div>
 </template>
 
 <style type="text/css" scoped>
 #input{
- width: 86%;
- background-color: gray;
- position: fixed;
- z-index:1000;
- bottom:80px;
- border:solid gray 1px;
- left:28px;
+   width: 86%;
+   background-color: gray;
+   position: fixed;
+   z-index:1000;
+   bottom:80px;
+   border:solid gray 1px;
+   left:28px;
 }
 #tag{
     height:55px;
@@ -180,7 +195,7 @@ p{
 </style>
 <script type="text/javascript">
     import message from '../Goods/Message.vue'
-   
+
     export default{
         components:{
             'message':message
@@ -215,7 +230,8 @@ p{
             'like':true,
             'collection':true,
             'info':'',
-            'flag':false
+            'flag':false,
+            'show':false,
         }
     },
     methods:{
@@ -235,12 +251,12 @@ p{
             this.flag=false
         },
         sign(){
-            this.$router.push('/activity/sign')
+            this.show=true
         },
         luck(){
             this.$router.push('/activity/luck')
         }
-  },
+    },
 
 }
 </script>
