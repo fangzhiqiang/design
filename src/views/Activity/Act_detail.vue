@@ -197,6 +197,7 @@ p{
     import message from '../Goods/Message.vue'
 
     export default{
+        name:'a_act_detail',
         components:{
             'message':message
         },

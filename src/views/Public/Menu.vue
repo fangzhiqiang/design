@@ -24,7 +24,9 @@
 
 </style>
 <script type="text/javascript">
+    
     export default{
+        name:'p_menu',
         props:['list'],
         data(){
             return{

@@ -29,6 +29,7 @@
 </style>
 <script type="text/javascript">
     export default{
+        name:'g_message',
         props:['data'],
         data(){
             return{

@@ -31,6 +31,7 @@
 
 <script type="text/javascript">
   export default{
+    name:'a_resluck',
     data(){
       return{
         list:[

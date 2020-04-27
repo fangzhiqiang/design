@@ -92,6 +92,7 @@
 
 <script type="text/javascript">
   export default {
+    name:'a_index',
     data() {
       return {
         value: 0,

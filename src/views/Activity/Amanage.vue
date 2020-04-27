@@ -90,6 +90,7 @@
 
 <script>
     export default{
+      name:'a_manage',
         data(){
             return{
                 data_list:[

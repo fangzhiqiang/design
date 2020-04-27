@@ -15,17 +15,13 @@
         </van-tabs>
     </div>
     <div style='margin-bottom: 60px;background-color: #f4f4f4 '>
-        <router-view />
+        <keep-alive><router-view /></keep-alive>
     </div>
   </div>
 </template>
 
 <script type="text/javascript">
-    /*$(window).scroll(function(){
-        if($(window).scrollTop() >= 200){
-          alert('dsaas');
-        } 
-    });*/
+   
     export default{
         data(){
             return{

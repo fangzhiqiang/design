@@ -37,7 +37,7 @@
         </template>
     </van-search>
 
-    <div class='position' v-for='(pos,index) in pos_list' :key='index'>
+    <div @click='skip' class='position' v-for='(pos,index) in pos_list' :key='index'>
         <div class='title'>
             <p>{{pos.title}}</p>
             <p>{{pos.salary}}</p>
@@ -59,7 +59,7 @@
     </div>
 </div>
 </template>
-<style type="text/css">
+<style type="text/css" scoped="scoped">
 .title>p:nth-of-type(1){
     font-size:24px;
     font-weight: bold;
@@ -122,7 +122,11 @@
 <script type="text/javascript">
     import { Toast } from 'vant';
     export default{
+        name:'r_index',
         methods:{
+            skip(){
+                this.$router.push('/recruit/detail')
+            },
             select1(data){
                 this.$refs.address.toggle()
                 Toast(data[2].name)

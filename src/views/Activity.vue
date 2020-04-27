@@ -17,7 +17,6 @@
 <div style='margin-bottom: 60px;background-color: #f4f4f4 '>
     <!-- <keep-alive><router-view :key="$route.fullPath" /></keep-alive> -->
     <router-view />
-
 </div>
 
 </div>

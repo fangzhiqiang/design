@@ -20,6 +20,7 @@
 <script type="text/javascript">
     import { Toast } from 'vant';
     export default {
+      name:'g_pay',
       data() {
         return {
           value: '',

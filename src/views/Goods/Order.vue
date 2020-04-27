@@ -53,6 +53,7 @@ thumb="https://img.yzcdn.cn/vant/ipad.jpeg"
     import { Dialog } from 'vant';
     import { Toast } from 'vant';
     export default{
+        name:'g_order',
         data(){
             return{
                 state:'已付款',

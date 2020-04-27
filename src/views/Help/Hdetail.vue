@@ -186,6 +186,7 @@ p{
     import { Dialog } from 'vant';
     import { Toast } from 'vant';
     export default{
+        name:'h_detail',
         components:{
             'message':message
         },

@@ -48,6 +48,7 @@
 
 <script type="text/javascript">
     export default{
+        name:'h_chat',
         methods:{
             skip(){
                 this.$router.push('/help/Hchat_detail')

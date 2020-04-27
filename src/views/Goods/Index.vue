@@ -150,6 +150,7 @@
 </style>
 <script type="text/javascript">
     export default{
+        name:'g_index',
         data(){
             return{
                 img:[

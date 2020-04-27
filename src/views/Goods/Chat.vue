@@ -48,6 +48,7 @@
 
 <script type="text/javascript">
     export default{
+        name:'g_chat',
         methods:{
             skip(){
                 this.$router.push('/goods/chat_detail')

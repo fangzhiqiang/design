@@ -183,6 +183,7 @@
 <script type="text/javascript">
     import message from './Message.vue'
     export default{
+        name:'g_detail',
         components:{
             'message':message
         },

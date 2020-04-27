@@ -57,6 +57,7 @@
 
 <script type="text/javascript">
     export default{
+        name:'g_chat_detail',
         methods:{
             add(){
                 var data = {'right':this.info,'left':0,'time':0,img:require('../../assets/goods/test1.jpg')}

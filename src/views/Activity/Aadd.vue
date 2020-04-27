@@ -84,6 +84,7 @@
 </style>
 <script type="text/javascript">
   export default{
+    name:'a_add',
     data(){
       return{
         checked: false,

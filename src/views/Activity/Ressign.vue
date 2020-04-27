@@ -42,6 +42,12 @@
   </div>
 </template>
 
+<script type="text/javascript">
+  export default{
+    name:'a_ressign',
+  }
+</script>
+
 <style type="text/css"> 
 /* CSS Document */ 
 

@@ -42,6 +42,7 @@
     import { Dialog } from 'vant';
     import { Toast } from 'vant';
     export default {
+      name:'g_order_detail',
       data() {
         return {
           chosenAddressId: '1',

@@ -51,6 +51,7 @@
 </style>
 <script type="text/javascript">
 export default{
+  name:'h_add',
     data(){
         return{
             activeNames: ['1'],

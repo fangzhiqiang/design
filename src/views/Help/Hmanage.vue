@@ -87,6 +87,7 @@
 
 <script>
     export default{
+      name:'h_manage',
         data(){
             return{
                 data_list:[

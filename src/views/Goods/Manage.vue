@@ -42,6 +42,7 @@
 
 <script>
     export default{
+      name:'g_manage',
         data(){
             return{
 

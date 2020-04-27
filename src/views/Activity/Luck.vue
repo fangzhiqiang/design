@@ -44,6 +44,7 @@
   import { Dialog } from 'vant';
   
   export default {
+    name:'a_luck',
     data() {
       return {
         result:0,

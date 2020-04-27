@@ -36,6 +36,15 @@ import Ressign from '../views/Activity/Ressign.vue'
 import r_index from '../views/Recruit/Index.vue'
 import Recruit from '../views/Recruit.vue'
 import Test from '../views/Test.vue'
+import r_detail from '../views/Recruit/Detail.vue'
+import r_add from '../views/Recruit/Add.vue'
+import r_manage from '../views/Recruit/Manage.vue'
+import r_resume from '../views/Recruit/Resume.vue'
+import resume_detail from '../views/Recruit/Resume_detail.vue'
+
+
+//
+import m_index from '../views/My/Index.vue'
 
 
 
@@ -50,6 +59,7 @@ Vue.use(VueRouter)
   
   {
     path:'/test',
+    name: 'test',
     component:Test
   },
   //二手交易路由
@@ -60,46 +70,53 @@ Vue.use(VueRouter)
     children:[
       {
         path:'index',
+        name: 'index',
         component:Index
       },
       {
         path:'chat',
+        name: 'chat',
         component:Chat
       },
       {
         path:'order',
+        name: 'order',
         component:Order
       },
       {
         path:'manage',
+        name: 'manage',
         component:Manage
       },
       {
         path:'add',
+        name: 'add',
         component:Add
       },
       {
         path:'buy',
+        name: 'buy',
         component:Buy
       },
       {
         path:'pay',
+        name: 'pay',
         component:Pay
       },
-      {
-        path:'order',
-        component:Order
-      },
+
       {
         path:'order_detail',
+        name: 'order_detail',
         component:Order_detail
       },
       {
         path:'chat_detail',
+        name: 'chat_detail',
         component:Chat_detail
       },
       {
         path:':id',
+        name: 'details',
         component:Details
       },
       
@@ -112,30 +129,37 @@ Vue.use(VueRouter)
     children:[
       {
         path:'index',
+        name: 'Hindex',
         component:Hindex
       },
       {
         path:'get',
+        name: 'Hget',
         component:Hget
       },
       {
         path:'add',
+        name: 'Hadd',
         component:Hadd
       },
       {
         path:'manage',
+        name: 'Hmanage',
         component:Hmanage
       },
       {
         path:'chat',
+        name: 'Hchat',
         component:Hchat
       },
       {
         path:'Hchat_detail',
+        name: 'Hchat_detail',
         component:Hchat_detail
       },
       {
         path:':id',
+        name: 'Hdetail',
         component:Hdetail
       },
 
@@ -146,35 +170,43 @@ Vue.use(VueRouter)
   {
     path:'/activity',
     component:Activity,
+    name: 'Activity',
     children:[
       {
+        name: 'Aindex',
         path:'index',
         component:Aindex
       },
      
       {
+        name: 'Luck',
         path:'luck',
         component:Luck
       },
       {
         path:'add',
+        name: 'Aadd',
         component:Aadd,
       },
       {
         path:'manage',
+        name: 'Amanage',
         component:Amanage,
       },
       {
         path:'res_luck',
+        name: 'Resluck',
         component:Resluck,
       },
       {
         path:'res_sign',
+        name: 'Ressign',
         component:Ressign,
       },
       
       {
         path:':id',
+        name: 'Act_detail',
         component:Act_detail
       },
     ]
@@ -183,17 +215,56 @@ Vue.use(VueRouter)
   {
     path:'/recruit',
     component:Recruit,
+    name: 'Recruit',
     children:[
       {
         path:'index',
+        name: 'r_index',
         component:r_index,
+      },
+      {
+        path:'detail',
+        name: 'r_detail',
+        component:r_detail,
+      },
+      {
+        path:'add',
+        name: 'r_add',
+        component:r_add,
+      },
+      {
+        path:'manage',
+        name: 'r_manage',
+        component:r_manage,
+      },
+      {
+        path:'resume',
+        name: 'r_resume',
+        component:r_resume,
+      },
+      {
+        path:'resume_detail',
+        name: 'resume_detail',
+        component:resume_detail,
+      },
+    ]
+  },
+  {
+    path:'/my',
+    component:m_index,
+    name: 'm_index',
+    children:[
+      {
+        path:'index',
+        name: 'm_index',
+        component:m_index,
       }
     ]
   }
 ]
 
 const router = new VueRouter({
-  mode: 'history',
+  mode: 'hash',
   base: process.env.BASE_URL,
   routes
 })

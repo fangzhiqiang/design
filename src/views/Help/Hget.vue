@@ -93,6 +93,7 @@
   import { Dialog } from 'vant';
   import { Toast } from 'vant';
   export default{
+    name:'h_get',
     data(){
       return{
         state:'未完成',

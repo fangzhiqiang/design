@@ -54,6 +54,7 @@
 
 <script type="text/javascript">
     export default {
+      name:'h_index',
       data() {
         return {
           value: 0,

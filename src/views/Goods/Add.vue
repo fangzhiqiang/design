@@ -51,6 +51,7 @@
 </style>
 <script type="text/javascript">
 export default{
+  name:'g_add',
     data(){
         return{
             activeNames: ['1'],
