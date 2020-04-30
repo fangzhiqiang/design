@@ -1,21 +1,26 @@
 <template>
     <div>
         <van-card style='margin-top:30px' centered
-        num="2"
-        price="2.00"
-        desc="描述信息78787878787"
-        title="商品标题"
+        num="1"
+        price="6000.00"
+        desc="用了6个月，9成新。"
+        title="Huawei Mate30 pro"
         thumb="https://img.yzcdn.cn/vant/ipad.jpeg"
         >
-            <template #tags>
+            <!-- <template #tags>
                 <van-tag plain type="danger">标签</van-tag>
                 <van-tag plain type="danger">标签</van-tag>
             </template>
             <template #footer>
                 <van-button size="mini">按钮</van-button>
                 <van-button size="mini">按钮</van-button>
-            </template>
+            </template> -->
         </van-card>
+        <van-divider
+        :style="{ color: '#1989fa', borderColor: '#1989fa', padding: '0 16px' }"
+        >
+        选择收货地址
+      </van-divider>
         <van-address-list style='margin-bottom: 50px;bottom:40px'
         v-model="chosenAddressId"
         :list="list"
@@ -36,7 +41,7 @@
             <van-field v-model="address" label="收货地址" />
             <van-field v-model="name" label="收件人" />
             <van-field v-model="tel" label="手机" />
-            <van-button block=true style='width:90%;margin:auto;margin-top:40px' color='#c70039'  round type="info" @click='modify()'>{{button}}</van-button>
+            <van-button block style='width:90%;margin:auto;margin-top:40px' color='#c70039'  round type="info" @click='modify()'>{{button}}</van-button>
           </div>
         </van-overlay>
 
@@ -45,6 +50,10 @@
 </template>
 
 <style>
+.van-card__title{
+  font-size:18px;
+  padding-bottom: 10px
+}
     .wrapper{
         margin-top:100px;
         
@@ -78,13 +87,13 @@
               id: '1',
               name: '张三',
               tel: '13000000000',
-              address: '浙江省杭州市西湖区文三路 138 号东方通信大厦 7 楼 501 室'
+              address: '杭电生活区21号楼506寝室'
           },
           {
               id: '2',
               name: '李四',
               tel: '1310000000',
-              address: '浙江省杭州市拱墅区莫干山路 50 号'
+              address: '杭电生活区5号楼103寝室'
           }
           ],
          

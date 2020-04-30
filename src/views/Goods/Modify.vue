@@ -30,11 +30,11 @@
     <hr style='width:97%;opacity: 0.5'>
     <van-field placeholder='请输入产品名称' v-model="name" type="text" label="名称:" />
     <hr style='width:97%;opacity: 0.5'>
-    <van-field placeholder='请输入产品型号' v-model="name" type="text" label="型号:" />
+    <van-field placeholder='请输入产品型号' value='TS-001' type="text" label="型号:" />
     <hr style='width:97%;opacity: 0.5'>
-    <van-field placeholder='请输入销售价格' v-model="number" type="number" label="价格:" />
+    <van-field placeholder='请输入销售价格' value='￥6799.00' type="number" label="价格:" />
     <hr style='width:97%;opacity: 0.5'>
-    <van-button round type="info" block style='margin:auto;margin-top:30px;width:70%' color='#6983aa'>发布商品</van-button>
+    <van-button round type="info" block style='margin:auto;margin-top:30px;width:70%' color='#6983aa'>确认修改</van-button>
 </div>
 </template>
 <style type="text/css" scoped>
@@ -56,12 +56,13 @@ export default{
     data(){
         return{
             activeNames: ['1'],
-            message:'',
-            result: [],
+            message:'我是商品简介，我是商品简介，我是商品简介。',
+            result: ['a','c','d'],
             number:'',
-            name:'',
+            name:'Huawei Mate30 Pro',
             fileList: [
-                { url: 'https://img.yzcdn.cn/vant/leaf.jpg' },
+                { url: require('../../assets/goods/w.png') },
+                { url: require('../../assets/goods/w1.png') },
             ]
         }
     }

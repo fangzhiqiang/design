@@ -1,6 +1,6 @@
 <template>
     <div id='chat'>
-        <van-divider :style="{ color: '#1989fa', borderColor: '#1989fa', padding: '0 16px' }">聊天对象
+        <van-divider :style="{ color: '#1989fa', borderColor: '#1989fa', padding: '0 16px' }">Kawasaki
         </van-divider>
         <div v-for='(item,index) in chat_list' :key='index'>
             <div class='left' v-if='item.left'>
@@ -21,7 +21,7 @@
         </div>
 
         <div id='send'>
-            <van-field style='background-color: #f8e1f4;padding-left:40px;left:0px;position:fixed;bottom: 0;z-index:100000'
+            <van-field style='background-color: #dbdbdb;padding-left:40px;left:0px;position:fixed;bottom: 0;z-index:100000'
             size='large'
             center
             clearable
@@ -60,7 +60,7 @@
         name:'g_chat_detail',
         methods:{
             add(){
-                var data = {'right':this.info,'left':0,'time':0,img:require('../../assets/goods/test1.jpg')}
+                var data = {'right':this.info,'left':0,'time':0,img:require('../../assets/goods/h7.png')}
                 this.chat_list.push(data)
                 this.info=''
             }
@@ -73,37 +73,37 @@
                     'left':'这是左边内容',
                     'right':0,
                     'time':0,
-                    'img':require('../../assets/goods/test1.jpg')
+                    'img':require('../../assets/goods/h4.jpeg')
                 },
                 {
                     'left':0,
                     'right':0,
-                    'time':'这是时间',
-                    'img':require('../../assets/goods/test1.jpg')
+                    'time':'2019-10-20 14:20:25',
+                    'img':require('../../assets/goods/h4.jpeg')
                 },
                 {
                     'left':0,
                     'right':'这是右边内容',
                     'time':0,
-                    'img':require('../../assets/goods/test1.jpg')
+                    'img':require('../../assets/goods/h7.png')
                 },
                 {
                     'left':0,
                     'right':'这是右边内容',
                     'time':0,
-                    'img':require('../../assets/goods/test1.jpg')
+                    'img':require('../../assets/goods/h7.png')
                 },
                 {
                     'left':0,
                     'right':'这是右边内容',
                     'time':0,
-                    'img':require('../../assets/goods/test1.jpg')
+                    'img':require('../../assets/goods/h7.png')
                 },
                 {
                     'left':'这是左边内容',
                     'right':0,
                     'time':0,
-                    'img':require('../../assets/goods/test1.jpg')
+                    'img':require('../../assets/goods/h4.jpeg')
                 },
                 ]
             }

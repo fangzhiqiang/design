@@ -11,6 +11,7 @@ import Buy from '../views/Goods/Buy.vue'
 import Pay from '../views/Goods/Pay.vue'
 import Order_detail from '../views/Goods/Order_detail.vue'
 import Chat_detail from '../views/Goods/Chat_detail.vue'
+import g_modify from '../views/Goods/Modify.vue'
 
 //互助页面
 import Help from '../views/Help.vue'
@@ -72,6 +73,11 @@ Vue.use(VueRouter)
         path:'index',
         name: 'index',
         component:Index
+      },
+      {
+        path:'modify',
+        name: 'g_modify',
+        component:g_modify
       },
       {
         path:'chat',

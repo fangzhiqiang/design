@@ -3,29 +3,30 @@
         <div id='head'>
             <van-image
                 width='50px' height='50px' radius='10px' fit="fill"
-                :src="require('../../assets/goods/test1.jpg')"
+                :src="require('../../assets/goods/h4.jpeg')"
                 />
             <div style='padding-left:20px'>
-                <p>我的昵称</p>
+                <p>别问我在不在</p>
                 <p style='color:gray;font-size: 14px'>发布于5天前</p>
             </div>   
         </div>
         <hr style='width:97%;opacity: 0.5'>
-        <p style='margin-top:20px;margin-left:-4px;color:red;font-size:20px'>￥9999</p>
+        <p style='margin-top:20px;margin-left:-4px;color:red;font-size:20px'>￥4000</p>
         <div id='content'>
-            <h3>这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容</h3>
+            <h3>华为mate30pro 8+256 翡冷翠
+全新未拆封，电子发票，可以验货7天全国联保，27号到手，个人原因一口价4000出了，最新配置，有任何质量问题无条件包退！之内随时退货诚意，要买的请留言联系我。</h3>
         </div>
         <div id='img'>
-            <van-image
-                radius='20px 20px 0 0' fit="contain"
-                :src="require('../../assets/goods/test1.jpg')"
+            <van-image width='100%'
+                radius='20px 20px 0 0' fit="fill"
+                :src="require('../../assets/goods/w.png')"
                 />
-            <van-image v-for="(item,index) in img_list" :key='index'
+            <van-image width='100%' v-for="(item,index) in img_list" :key='index'
                  fit="contain"
                 :src="item"
                 />
             <div id='img_bottom'>
-                <van-image v-for="(item,index) in img_bottom" :key='index'
+                <van-image  v-for="(item,index) in img_bottom" :key='index'
                  fit="fill"
                 :src="item"
                 />
@@ -39,13 +40,13 @@
         <div class='pass'></div>
         <div id='info'>
             <div>
-                <p style='line-height: 15px;padding-top:15px;padding-bottom:15px;font-size: 20px'>昵称</p>
+                <p style='line-height: 15px;padding-top:15px;padding-bottom:15px;font-size: 20px'>别问我在不在</p>
                 <p style='padding-top:10px;line-height: 28px'>入驻50天了,卖出了很多商品入驻50天了,卖出了很多商品入驻50天了,卖出了很多商品</p>
             </div>
             <van-image
                 width="60px" height="60px"
                 fit="fill"
-                :src="require('../../assets/goods/test1.jpg')"
+                :src="require('../../assets/goods/h4.jpeg')"
                 />
         </div>
         <div class='pass'></div>
@@ -87,7 +88,8 @@
                 <div style='font-size: 13px;text-align: center;margin-top:-5px'>留言</div>
             </div>
             <div style="float:right;margin-right:40px;margin-top:5px">
-                <van-button to='/goods/buy' style='font-size:20px;' color="linear-gradient(to right, #aeefec, #dd2c00)" size='normal' round type="info">购买商品</van-button>
+                <van-button to='/goods/buy' style='font-size:18px;' color="linear-gradient(to right, #900c3f, #c70039)" size='normal' round type="info">购买</van-button>
+                <van-button to='/goods/chat_detail' style='margin-left:10px;font-size:18px;' color="linear-gradient(to right, #900c3f, #c70039)" size='normal' round type="info">私聊</van-button>
             </div>
             
             
@@ -190,29 +192,26 @@
         data(){
             return{
                 img_list:[
-                    require('../../assets/goods/test1.jpg'),
-                    require('../../assets/goods/test1.jpg'),
-                    require('../../assets/goods/test1.jpg'),
-                    require('../../assets/goods/test1.jpg'),
+                    require('../../assets/goods/g2.jpeg'),  
                 ],
                 img_bottom:[
-                    require('../../assets/goods/test1.jpg'),
-                    require('../../assets/goods/test1.jpg'),
-                    require('../../assets/goods/test1.jpg'),
-                    require('../../assets/goods/test1.jpg'),
+                    require('../../assets/goods/w.png'),
+                    require('../../assets/goods/w1.png'),
+                    require('../../assets/goods/w2.png'),
+                    require('../../assets/goods/w3.png'),
                 ],
                 message:[
-                    {'name':'我的昵称','url':require('../../assets/goods/test1.jpg'),'content':'我是内容我的留言','time':'1小时前','answer':0},
-                    {'name':'我的昵称','url':require('../../assets/goods/test1.jpg'),'content':'我是内容我的留言','time':'1小时前','answer':[
+                    {'name':'kawasaki','url':require('../../assets/goods/h1.jpeg'),'content':'我是内容我的留言','time':'1小时前','answer':0},
+                    {'name':'ducati','url':require('../../assets/goods/h2.jpeg'),'content':'我是内容我的留言','time':'1小时前','answer':[
                             {
-                            'name':'回复昵称','url':require('../../assets/goods/test1.jpg'),'content':'回复@某个人:这是我的回复','time':'5小时前',
+                            'name':'Coisini','url':require('../../assets/goods/h3.jpeg'),'content':'回复@楼主:这是我的回复','time':'5小时前',
                             },
                             {
-                            'name':'回复昵称','url':require('../../assets/goods/test1.jpg'),'content':'回复@某个人:这是我的回复','time':'5小时前',
+                            'name':'哇咔咔','url':require('../../assets/goods/h4.jpeg'),'content':'回复@某个人:这是我的回复','time':'5小时前',
                             }
                         ]
                     },
-                    {'name':'我的昵称','url':require('../../assets/goods/test1.jpg'),'content':'我是内容我的留言','time':'1小时前','answer':0},
+                    {'name':'Pumpkin','url':require('../../assets/goods/h5.jpeg'),'content':'我是内容我的留言','time':'1小时前','answer':0},
                 ],
                 'like':true,
                 'collection':true,
@@ -232,7 +231,7 @@
                 this.flag=!this.flag
             },
             send(){
-                var info = {'name':'新增留言','url':require('../../assets/goods/test1.jpg'),'content':this.info,'time':'1小时前','answer':0};
+                var info = {'name':'Suzuki','url':require('../../assets/goods/h7.png'),'content':this.info,'time':'1小时前','answer':0};
                 this.message.unshift(info)
                 this.flag=false
             }

@@ -2,24 +2,20 @@
     <div>
         <van-dropdown-menu>
           <van-dropdown-item v-model="value" :options="option" />
-          <van-dropdown-item title="筛选" ref="item">
-            <van-switch-cell v-model="switch1" title="包邮" />
-            <van-switch-cell v-model="switch2" title="团购" />
-            <van-button block type="info" @click="onConfirm">确认</van-button>
-        </van-dropdown-item>
+          <van-dropdown-item v-model="value1" :options="option1" />
     </van-dropdown-menu>
     <div> 
-        <div class='message' @click='skip'>
+        <div v-for='(item,index) in list' :key='index' class='message' @click='skip'>
             <van-image
             width='50px' height='50px' radius='25px' fit="fill"
-            :src="require('../../assets/goods/test1.jpg')"
+            :src="item.ava"
             />
             <div class='info'>
-                <p style='font-weight: bold;font-size: 18px;margin-top:0px'>我是昵称</p>
-                <p>我是消息内容4545411</p>
-                <p style='color:gray;font-size: 12px'>2019-10-05</p>
+                <p style='font-weight: bold;font-size: 18px;margin-top:0px'>{{item.name}}</p>
+                <p>{{item.desc}}</p>
+                <p style='color:gray;font-size: 12px'>{{item.time}}</p>
             </div>
-            <p style='margin-left:30px;color:red;font-size:20px'>+10</p>
+            <p style='margin-left:30px;color:red;font-size:20px'>+{{item.integral}}</p>
         </div>
     </div>
 
@@ -47,7 +43,7 @@
         text-overflow: ellipsis;
     }
     .info{
-        width:230px;
+        width:200px;
         padding-right:10px;
     }
 </style>
@@ -58,12 +54,23 @@
       data() {
         return {
           value: 0,
-          switch1: false,
-          switch2: false,
           option: [
-          { text: '全部商品', value: 0 },
-          { text: '新款商品', value: 1 },
-          { text: '活动商品', value: 2 }
+            { text: '筛选', value: 0 },
+            { text: '线上任务', value: 1 },
+            { text: '线下任务', value: 2 },
+            { text: '快递代取', value: 3 },
+            { text: '商品代购', value: 4 },
+          ],
+          value1: 0,
+          option1: [
+            { text: '排序', value: 0 },
+            { text: '最新发布', value: 1 },
+            { text: '积分最多', value: 2 },
+            { text: '热度最高', value: 3 },
+          ],
+          list:[
+            {'name':'kawasaki','ava':require('../../assets/goods/h1.jpeg'),'desc':'5号楼代取一个快递','time':'1小时前','integral':20},
+            {'name':'Pumpkin','url':require('../../assets/goods/h5.jpeg'),'content':'我是内容我的留言','time':'1小时前','answer':0},
           ]
       }
   },
