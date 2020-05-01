@@ -11,7 +11,6 @@ import '@nutui/nutui/dist/nutui.css';
 NutUI.install(Vue);
 
 Vue.config.productionTip = false
-
 Vue.use(Vant);
 
 new Vue({

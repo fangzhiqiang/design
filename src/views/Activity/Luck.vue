@@ -2,7 +2,7 @@
 
   <div style='height: 100vh;background-color: white;padding-top:10px'>
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
-    <van-panel  title="某某活动抽奖" desc="描述信息" :status="status">
+    <van-panel  title="校园十佳歌手活动抽奖" desc="获奖后请凭获奖界面到学生活动中心领取奖品" :status="status">
       <div v-if='result' style="padding-left: 15px">我的奖品： {{result}}</div>
     </van-panel>
 

@@ -3,7 +3,7 @@
     <van-swipe-cell  v-for='(item,index) in data_list' :key='index'>
       <van-card  style='margin-top:20px' centered
       :desc="item.desc"
-      :thumb="item.img"
+      
       >
       <template #title>
           <div class='title'>
@@ -21,7 +21,7 @@
     <template #thumb>
       <van-image style='margin-top:17px'
       width='60px' height='60px' fit="fill"
-      :src="require('../../assets/goods/test1.jpg')"
+      :src="item.img"
       />
   </template>
 
@@ -29,6 +29,7 @@
 </van-card>
 <template #right>
     <van-button
+    to='/activity/modify'
     square
     text="编辑"
     type="primary"
@@ -47,46 +48,54 @@
 </template>
 
 <style type="text/css" scoped>
-.goods-card {
-  margin-top:0px;
-  background-color: @white;
-  margin-right:0px;
-}
-.van-swipe-cell{
-  margin-top:-7px;
-}
+  .van-card__desc{
+    font-size: 14px;
+    margin-left:-8px;
+  }
+  .goods-card {
+    margin-top:0px;
+    background-color: @white;
+    margin-right:0px;
+  }
+  .van-swipe-cell{
+    margin-top:-7px;
+  }
 
-.delete-button {
-  height: 100%;
-}
+  .delete-button {
+    height: 100%;
+  }
 
-.tag{
-  display:flex;
-  justify-content: flex-end;
-  margin-top:10px;
-}
-.tag>div{
+  .tag{
+    display:flex;
+    justify-content: flex-end;
+    margin-top:10px;
+  }
+  .tag>div{
+    margin-left:10px;
     margin-right:10px;
-}
-.title{
-  display: flex;
-  justify-content: space-between;
-  font-size:17px;
-  align-items: center;
- 
-  margin-left:-7px;
-}
-.title>p:nth-of-type(1){
-  font-weight: bold;
-}
-.title>p:nth-of-type(2){
-  font-size:14px;
-}
-.about{
-  letter-spacing: 1px;
-}
+  }
+  .van-tag--plain{
+    margin-left:10px;
+    font-size:12px;
+  }
+  .title{
+    display: flex;
+    justify-content: space-between;
+    font-size:17px;
+    align-items: center;
+   
+    margin-left:-7px;
+  }
+  .title>p:nth-of-type(1){
+    font-weight: bold;
+  }
+  .title>p:nth-of-type(2){
+    font-size:14px;
+  }
+  .about{
+    letter-spacing: 1px;
+  }
 </style>
-
 
 <script>
     export default{
@@ -95,20 +104,22 @@
             return{
                 data_list:[
                 {
-                    price:'8积分',
-                    img:'https://img.yzcdn.cn/vant/cat.jpeg',
-                    title:'任务名称',
-                    desc:'我是描述',
-                    state:'已被完成',
-                    date:'2020-10-21'
+                  img:require('../../assets/activity/s1.png'),
+                  title:'校园十佳歌手',
+                  desc:'活动简介，活动描述',
+                  date:'2020-10-21'
                 },
                 {
-                    price:'2积分',
-                    img:'https://img.yzcdn.cn/vant/cat.jpeg',
-                    title:'任务名称',
-                    desc:'我是描述',
-                    state:'已被领取',
-                    date:'2020-05-01'
+                  img:require('../../assets/activity/s5.png'),
+                  title:'台球社招新',
+                  desc:'活动简介，活动描述',    
+                  date:'2020-05-14'
+                },
+                {
+                  img:require('../../assets/activity/s4.png'),
+                  title:'街舞社招新',
+                  desc:'活动简介，活动描述',    
+                  date:'2020-03-01'
                 }
                 ]
             }

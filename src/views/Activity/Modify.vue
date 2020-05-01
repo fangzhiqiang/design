@@ -1,27 +1,21 @@
 <template>
   <div id='add'>
-    <van-field placeholder='请输入活动名称' v-model="name" type="text" label="名称:" />
+    <van-field value='街舞社招新'  type="text" label="名称:" />
     <hr style='width:97%;opacity: 0.5'>
-    <van-field placeholder='请输入活动地点' v-model="number" type="number" label="地点:" />
+    <van-field value='学生活动中心舞池'  type="text" label="地点:" />
     <hr style='width:97%;opacity: 0.5'>
-    <van-field @focus='show' v-model='final_date' placeholder='请选择活动开始时间'  type="number" label="时间:" />
+    <van-field value='2020-03-20 19:30:00' type="number" label="时间:" />
     <hr style='width:97%;opacity: 0.5'>
-    <van-datetime-picker @confirm='hidden' v-if='isShow'
-    v-model="currentDate"
-    type="datetime"
-    :min-date="minDate"
-    :max-date="maxDate"
     
-    />
     <van-field
-    v-model="message"
+    
     rows="2"
     autosize
     label="描述信息"
     type="textarea"
     maxlength="500"
-    placeholder="请输入简介"
-    show-word-limit
+    value="社团活动招新的简介信息，社团活动招新的简介信息，社团活动招新的简介信息。"
+      show-word-limit
     />
     <hr style='width:97%;opacity: 0.5'>
     <div style="font-size:14px;color:#323233;padding:10px 16px">上传活动海报</div>
@@ -62,7 +56,7 @@
     <hr style='width:97%;opacity: 0.5'>
 
     
-    <van-button round type="info" block style='margin:auto;margin-top:30px;width:70%' color='#6983aa'>发布活动</van-button>
+    <van-button round type="info" block style='margin:auto;margin-top:30px;width:70%' color='#6983aa'>确认修改</van-button>
   </div>
 </template>
 <style type="text/css" scoped>
@@ -87,8 +81,8 @@
     name:'a_add',
     data(){
       return{
-        checked: false,
-        checked_sign: false,
+        checked: true,
+        checked_sign: true,
         isShow:false,
         data:'',
         minDate: new Date(2020, 0, 1),
@@ -104,7 +98,10 @@
         { url: 'https://img.yzcdn.cn/vant/leaf.jpg' },
         ],
         luck_list:[
-          {'name':'','num':''},
+          {'name':'手机','num':'1'},
+          {'name':'平板','num':'1'},
+          {'name':'耳机','num':'2'},
+          {'name':'充电宝','num':'3'},
         ]
       }
     },

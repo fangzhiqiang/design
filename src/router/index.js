@@ -35,6 +35,8 @@ import Aadd from '../views/Activity/Aadd.vue'
 import Amanage from '../views/Activity/Amanage.vue'
 import Resluck from '../views/Activity/Resluck.vue'
 import Ressign from '../views/Activity/Ressign.vue'
+import a_modify from '../views/Activity/Modify.vue'
+import a_chat from '../views/Activity/Chat.vue'
 
 //招聘s
 import r_index from '../views/Recruit/Index.vue'
@@ -197,12 +199,23 @@ Vue.use(VueRouter)
         path:'index',
         component:Aindex
       },
+      {
+        
+        path:'chat',
+        component:a_chat
+      },
      
       {
-        name: 'Luck',
+       
         path:'luck',
         component:Luck
       },
+      {
+        name: 'Luck',
+        path:'modify',
+        component:a_modify
+      },
+
       {
         path:'add',
         name: 'Aadd',
