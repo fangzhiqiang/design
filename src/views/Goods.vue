@@ -57,7 +57,7 @@
       },
       watch:{
         '$route':'getPath'
-    }
+      }
 }
     /*window.onscroll = function () {
         // 获取窗口滚动的距离

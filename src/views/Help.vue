@@ -11,7 +11,7 @@
           <van-tab title="发布" to='/help/add'></van-tab>
           <van-tab title="管理" to='/help/manage'></van-tab>
           <van-tab title="我的任务" to='/help/get'></van-tab>
-          <van-tab title="留言" to='/help/chat'></van-tab>
+          <van-tab title="聊天" to='/help/chat'></van-tab>
         </van-tabs>
     </div>
     <div style='margin-bottom: 60px;background-color: #f4f4f4 '>
@@ -34,7 +34,28 @@
         methods:{
             onClickLeft(){
                 this.$router.go(-1)
-            }
+            },
+            getPath(){
+                var a = this.$route.path.split("/")
+                if(a[2]=='index'){
+                  this.active=0
+              }
+              if(a[2]=='add'||a[2]=='modify'){
+                  this.active=1
+              }
+              if(a[2]=='manage'){
+                  this.active=2
+              }
+              if(a[2]=='get'){
+                  this.active=3
+              }
+              if(a[2]=='chat'){
+                  this.active=4
+              }
+          }
+        },
+        watch:{
+            '$router':'getPath'
         }
     }
     /*window.onscroll = function () {

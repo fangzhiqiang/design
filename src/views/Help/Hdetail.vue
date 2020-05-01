@@ -1,22 +1,23 @@
 <template>
     <div id='container'>
-        <h3 style='text-align: center'>我是标题</h3>
+        
         <div id='head'>
             <van-image
             width='50px' height='50px' radius='10px' fit="fill"
-            :src="require('../../assets/goods/test1.jpg')"
+            :src="require('../../assets/goods/h6.jpeg')"
             />
             <div style='padding-left:20px'>
-                <p>我的昵称</p>
+                <p>Kawasaki</p>
                 <p style='color:gray;font-size: 14px'>发布于2020-02-02</p>
             </div>   
         </div>
+        <h3 style='text-align: center;margin-top:5px'>帮拿快递</h3>
         <hr style='width:97%;opacity: 0.5'>
         <p style='margin-top:20px;margin-left:-4px;color:red;font-size:20px'>20积分</p>
         <div id='content'>
-            <h3>这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容</h3>
+            <h3>在弗雷德广场带拿一个快递，不重。位置是12架3层501。姓名张三。送到32号楼502寝室。</h3>
         </div>
-        <div id='img'>
+        <!-- <div id='img'>
             <van-image
             radius='20px 20px 0 0' fit="contain"
             :src="require('../../assets/goods/test1.jpg')"
@@ -31,14 +32,14 @@
                 :src="item"
                 />
             </div>
-        </div>
+        </div> -->
 
         <div id='rooter'>
-            <p style='float:right'>28人想要·超赞5·浏览58754</p>
+            <p style='float:right'>超赞5·浏览58</p>
         </div>
         <div style='clear:both'></div>
         <div class='pass'></div>
-        <div id='info'>
+        <!-- <div id='info'>
             <div>
                 <p style='line-height: 15px;padding-top:15px;padding-bottom:15px;font-size: 20px'>昵称</p>
                 <p style='padding-top:10px;line-height: 28px'>入驻50天了,卖出了很多商品入驻50天了,卖出了很多商品入驻50天了,卖出了很多商品</p>
@@ -48,10 +49,10 @@
             fit="fill"
             :src="require('../../assets/goods/test1.jpg')"
             />
-        </div>
-        <div class='pass'></div>
+        </div> -->
+       
         <div id='message'>
-            <p style='padding-top: 10px;font-size: 19px;font-weight: bold;'>全部留言·52</p>
+            <p style='padding-top: 10px;font-size: 19px;font-weight: bold;'>全部留言·1</p>
         </div>
         <div class='chat' v-for="(item,index) in message" :key="index">
             <message :data="item" ></message>
@@ -87,7 +88,7 @@
             <img  style='margin-top:9px' width='25px' height='25px' src='../../assets/goods/chat.png'>
             <div style='font-size: 13px;text-align: center;margin-top:-5px'>留言</div>
         </div>
-        <div style="float:right;margin-right:20px;margin-top:5px">
+        <div style="float:right;margin-right:50px;margin-top:5px">
             <van-button @click='get' style='font-size:20px;' color="linear-gradient(to right, #900c3f, #c70039)" size='normal' round type="info">接取任务</van-button>
         </div>
 
@@ -205,17 +206,8 @@ p{
                 require('../../assets/goods/test1.jpg'),
                 ],
                 message:[
-                {'name':'我的昵称','url':require('../../assets/goods/test1.jpg'),'content':'我是内容我的留言','time':'1小时前','answer':0},
-                {'name':'我的昵称','url':require('../../assets/goods/test1.jpg'),'content':'我是内容我的留言','time':'1小时前','answer':[
-                {
-                    'name':'回复昵称','url':require('../../assets/goods/test1.jpg'),'content':'回复@某个人:这是我的回复','time':'5小时前',
-                },
-                {
-                    'name':'回复昵称','url':require('../../assets/goods/test1.jpg'),'content':'回复@某个人:这是我的回复','time':'5小时前',
-                }
-                ]
-            },
-            {'name':'我的昵称','url':require('../../assets/goods/test1.jpg'),'content':'我是内容我的留言','time':'1小时前','answer':0},
+                {'name':'ducati','url':require('../../assets/goods/h8.jpeg'),'content':'晚上送去行吗？','time':'1小时前','answer':0},
+                
             ],
             'like':true,
             'collection':true,

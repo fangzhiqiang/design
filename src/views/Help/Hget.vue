@@ -1,72 +1,90 @@
 <template>
   <div class="about">
-    <van-card  style='margin-top:20px' centered
+    <van-card  @click='skip' style='margin-top:20px' centered desc="互助任务描述信息"
+    title="物品代购" 
+     >
+      <template #tags>
+        <div class='tag'>
+          <van-tag plain type="danger">20 积分</van-tag>
+          <van-tag plain type="danger">{{state}}</van-tag>
+        </div> 
+      </template>
+      <template #title>
+        <div class='title'>
+          <p>物品代购</p>
+          <p></p>
+        </div> 
+      </template>
+      <template #thumb>
+        <van-image style='margin-top:9px'
+        width='70px' height='70px' radius='35px' fit="fill"
+        :src="require('../../assets/goods/h8.jpeg')"
+        />
+      </template>
+      <template #footer>
+        <van-button size="small" @click='confirm_data(1)'>退还任务</van-button>
+        <van-button size="small" @click='confirm_data(2)'>确认完成</van-button>
+      </template>
+    </van-card>
+    
+    <van-card  @click='skip' style='margin-top:20px' centered desc="互助任务描述信息"
+    title="物品代购" 
+     >
+      <template #tags>
+        <div class='tag'>
+          <van-tag plain type="danger">20 积分</van-tag>
+          <van-tag plain type="danger">已完成</van-tag>
+        </div> 
+      </template>
+      <template #title>
+        <div class='title'>
+          <p>快递代取</p>
+          <p></p>
+        </div> 
+      </template>
+      <template #thumb>
+        <van-image style='margin-top:9px'
+        width='70px' height='70px' radius='35px' fit="fill"
+        :src="require('../../assets/goods/h4.jpeg')"
+        />
+      </template>     
+    </van-card>
 
-    desc="描述信息78787878787"
-    title="商品标题"
-    thumb="https://img.yzcdn.cn/vant/ipad.jpeg"
-    >
-    <template #tags>
-      <div class='tag'>
-        <van-tag plain type="danger">20 积分</van-tag>
-        <van-tag plain type="danger">{{state}}</van-tag>
-      </div> 
-    </template>
-
-    <template #title>
-      <div class='title'>
-        <p>我是标题</p>
-        <p></p>
-      </div> 
-    </template>
-    <template #thumb>
-      <van-image style='margin-top:17px'
-      width='60px' height='60px' radius='30px' fit="fill"
-      :src="require('../../assets/goods/test1.jpg')"
-      />
-    </template>
-
-    <template #footer>
-      <van-button size="small" @click='confirm_data(1)'>退还任务</van-button>
-      <van-button size="small" @click='confirm_data(2)'>确认完成</van-button>
-    </template>
-  </van-card>
-
-  <van-card  style='margin-top:20px' centered
-
-    desc="描述信息78787878787"
-    title="商品标题"
-    thumb="https://img.yzcdn.cn/vant/ipad.jpeg"
-    >
-    <template #tags>
-      <div class='tag'>
-        <van-tag plain type="danger">20 积分</van-tag>
-        <van-tag plain type="danger">{{state1}}</van-tag>
-      </div> 
-    </template>
-
-    <template #title>
-      <div class='title'>
-        <p>我是标题</p>
-        <p>我发布的</p>
-      </div> 
-    </template>
-    <template #thumb>
-      <van-image style='margin-top:17px'
-      width='60px' height='60px' radius='30px' fit="fill"
-      :src="require('../../assets/goods/test1.jpg')"
-      />
-    </template>
-
-    <template #footer>
-      <van-button size="small" @click='confirm_data(3)'>同意完成</van-button>
+    <van-card  @click='skip' style='margin-top:20px' centered desc="互助任务描述信息"
+    title="物品代购" 
+     >
+      <template #tags>
+        <div class='tag'>
+          <van-tag plain type="danger">20 积分</van-tag>
+          <van-tag plain type="danger">已完成，等待确认</van-tag>
+        </div> 
+      </template>
+      <template #title>
+        <div class='title'>
+          <p>任务名称</p>
+          <p></p>
+        </div> 
+      </template>
+      <template #thumb>
+        <van-image style='margin-top:9px'
+        width='70px' height='70px' radius='35px' fit="fill"
+        :src="require('../../assets/goods/h7.png')"
+        />
+      </template>
       
-    </template>
-  </van-card>
+    </van-card>
+
+    
 </div>
 </template>
 
 <style type="text/css" scoped>
+.van-card__thumb{
+  
+  width:80px;
+  height:80px;
+}
+
 .tag{
   display:flex;
   justify-content: space-between;
@@ -74,13 +92,16 @@
 }
 .title{
   display: flex;
+  font-size:17px;
   justify-content: space-between;
 }
 .title>p:nth-of-type(1){
   font-weight: bold;
+  margin:0;
 }
 .title>p:nth-of-type(2){
   color:red;
+  margin:0;
 }
 .about{
   letter-spacing: 1px;
@@ -130,6 +151,9 @@
             Toast.success("操作成功")  
           })
         }
+      },
+      skip(){
+        this.$router.push('/help/g_detail')
       }
     },
   }

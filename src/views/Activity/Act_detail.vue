@@ -1,57 +1,48 @@
 <template>
     <div id='container'>
-        <h3 style='text-align: center'>我是标题</h3>
+        
         <div id='head'>
             <van-image
             width='50px' height='50px' radius='10px' fit="fill"
-            :src="require('../../assets/goods/test1.jpg')"
+            :src="require('../../assets/goods/h9.jpeg')"
             />
-            <div style='padding-left:20px'>
-                <p>我的昵称</p>
+            <div style='padding-left:20px;'>
+                <p>Suzuki</p>
                 <p style='color:gray;font-size: 14px'>发布于2020-02-02</p>
             </div>   
         </div>
+        <h3 style='text-align: center;margin-top:0'>十佳歌手演唱会</h3>
         <hr style='width:97%;opacity: 0.5'>
         
         <div id='content'>
             <h3>这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容</h3>
         </div>
+        <van-cell-group style='font-weight: bold;'>
+          <van-field label="活动地点:" value="学生活动中心" readonly />
+          
+          <van-field label="活动时间:" value="2020-06-30 19:00:00" readonly />
+          
+        </van-cell-group>
         <div id='img'>
             <van-image
             radius='20px 20px 0 0' fit="contain"
-            :src="require('../../assets/goods/test1.jpg')"
+            :src="require('../../assets/activity/s4.png')"
             />
             <van-image v-for="(item,index) in img_list" :key='index'
             fit="contain"
             :src="item"
             />
-            <div id='img_bottom'>
-                <van-image v-for="(item,index) in img_bottom" :key='index'
-                fit="fill"
-                :src="item"
-                />
-            </div>
+            
         </div>
 
         <div id='rooter'>
-            <p style='float:right'>28人想要·超赞5·浏览58754</p>
+            <p style='float:right'>超赞5145·浏览8754</p>
         </div>
         <div style='clear:both'></div>
-        <div class='pass'></div>
-        <div id='info'>
-            <div>
-                <p style='line-height: 15px;padding-top:15px;padding-bottom:15px;font-size: 20px'>社团简介</p>
-                <p style='padding-top:10px;line-height: 28px'>入驻50天了,卖出了很多商品入驻50天了,卖出了很多商品入驻50天了,卖出了很多商品</p>
-            </div>
-            <van-image
-            width="60px" height="60px"
-            fit="fill"
-            :src="require('../../assets/goods/test1.jpg')"
-            />
-        </div>
+        
         <div class='pass'></div>
         <div id='message'>
-            <p style='padding-top: 10px;font-size: 19px;font-weight: bold;'>全部留言·52</p>
+            <p style='padding-top: 10px;font-size: 19px;font-weight: bold;'>全部留言·5</p>
         </div>
         <div class='chat' v-for="(item,index) in message" :key="index">
             <message :data="item" ></message>
@@ -86,7 +77,7 @@
     </div>
 </div>
 <van-popup v-model="show" position="bottom" :style="{ height: '35%'}">
-    <van-cell-group style='padding:20px;margin-top:20px'>
+    <van-cell-group style='margin-top:20px'>
         <van-field v-model="value" label='姓名' placeholder="请输入姓名" />
         <van-field
         v-model="sms"
@@ -106,92 +97,95 @@
 </template>
 
 <style type="text/css" scoped>
-#input{
-   width: 86%;
-   background-color: gray;
-   position: fixed;
-   z-index:1000;
-   bottom:80px;
-   border:solid gray 1px;
-   left:28px;
-}
-#tag{
-    height:55px;
-    width:100%;
-    background-color: white;
-    position: fixed;
-    z-index:10;
-    bottom: 0;
-    left:0px;
-    padding-left:30px;
-    display: flex;
-    align-items: center;
-}
-#tag>div{
-    float:left;
-    margin-left:10px;
-}
-.answer{
-    margin-left:49px;
-}
-.pass{
-    background-color: #f4f4f4;
-    height:20px;
-    margin-left:-15px;
-    margin-right:-15px
-}
-#info{
-    display: flex;
-    align-items: center;
-}
-#info>div:nth-of-type(1){
-    flex:0 0 70%;
-    padding-right:20px;
-    padding-bottom: 20px
-}
-#img_bottom{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-#img_bottom>div{
-    flex:0 0 49%;
-    border:1px solid white;
-}
-#img_bottom div:nth-of-type(3){
-    margin-top:2px;
-}
-#img_bottom div:nth-of-type(4){
-    margin-top:2px;
-}
-#container{
-    padding:15px;
-    padding-top:20px;
-    background-color: white;
-    padding-bottom:50px;
-}
-#head{
-    display:flex;
-    align-items: center;
-    padding-bottom: 10px
-}
-p{
-    margin:5px;
-}
-#content{
-    margin-top:15px;
-    margin-bottom: 20px;
-}
-#content h3{
-    line-height: 30px;
-    text-indent: 40px
-}
-#rooter p{
-    padding:7px;
-    color:gray;
-    font-size: 18px;
+    .van-cell{
+        padding-left:0;
+    }
+    #input{
+       width: 86%;
+       background-color: gray;
+       position: fixed;
+       z-index:1000;
+       bottom:80px;
+       border:solid gray 1px;
+       left:28px;
+    }
+    #tag{
+        height:55px;
+        width:100%;
+        background-color: white;
+        position: fixed;
+        z-index:10;
+        bottom: 0;
+        left:0px;
+        padding-left:30px;
+        display: flex;
+        align-items: center;
+    }
+    #tag>div{
+        float:left;
+        margin-left:10px;
+    }
+    .answer{
+        margin-left:49px;
+    }
+    .pass{
+        background-color: #f4f4f4;
+        height:20px;
+        margin-left:-15px;
+        margin-right:-15px
+    }
+    #info{
+        display: flex;
+        align-items: center;
+    }
+    #info>div:nth-of-type(1){
+        flex:0 0 70%;
+        padding-right:20px;
+        padding-bottom: 20px
+    }
+    #img_bottom{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    #img_bottom>div{
+        flex:0 0 49%;
+        border:1px solid white;
+    }
+    #img_bottom div:nth-of-type(3){
+        margin-top:2px;
+    }
+    #img_bottom div:nth-of-type(4){
+        margin-top:2px;
+    }
+    #container{
+        padding:15px;
+        padding-top:20px;
+        background-color: white;
+        padding-bottom:50px;
+    }
+    #head{
+        display:flex;
+        align-items: center;
+        padding-bottom: 10px
+    }
+    p{
+        margin:5px;
+    }
+    #content{
+        margin-top:15px;
+        margin-bottom: 20px;
+    }
+    #content h3{
+        line-height: 30px;
+        text-indent: 40px
+    }
+    #rooter p{
+        padding:7px;
+        color:gray;
+        font-size: 18px;
 
-}
+    }
 </style>
 <script type="text/javascript">
     import message from '../Goods/Message.vue'
@@ -204,17 +198,10 @@ p{
         data(){
             return{
                 img_list:[
-                require('../../assets/goods/test1.jpg'),
-                require('../../assets/goods/test1.jpg'),
-                require('../../assets/goods/test1.jpg'),
-                require('../../assets/goods/test1.jpg'),
+                require('../../assets/activity/s5.png'),
+                
                 ],
-                img_bottom:[
-                require('../../assets/goods/test1.jpg'),
-                require('../../assets/goods/test1.jpg'),
-                require('../../assets/goods/test1.jpg'),
-                require('../../assets/goods/test1.jpg'),
-                ],
+                
                 message:[
                 {'name':'我的昵称','url':require('../../assets/goods/test1.jpg'),'content':'我是内容我的留言','time':'1小时前','answer':0},
                 {'name':'我的昵称','url':require('../../assets/goods/test1.jpg'),'content':'我是内容我的留言','time':'1小时前','answer':[

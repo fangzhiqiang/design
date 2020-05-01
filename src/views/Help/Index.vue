@@ -69,8 +69,9 @@
             { text: '热度最高', value: 3 },
           ],
           list:[
-            {'name':'kawasaki','ava':require('../../assets/goods/h1.jpeg'),'desc':'5号楼代取一个快递','time':'1小时前','integral':20},
-            {'name':'Pumpkin','url':require('../../assets/goods/h5.jpeg'),'content':'我是内容我的留言','time':'1小时前','answer':0},
+            {'name':'kawasaki','ava':require('../../assets/goods/h1.jpeg'),'desc':'5号楼代取一个快递','time':'2分钟前','integral':20},
+            {'name':'Pumpkin','ava':require('../../assets/goods/h5.jpeg'),'desc':'求2013年高等数学期末试卷','time':'1小时前','integral':10},
+            {'name':'啦啦啦','ava':require('../../assets/goods/h6.jpeg'),'desc':'帮带一份奶茶到32号楼','time':'3小时前','integral':5},
           ]
       }
   },

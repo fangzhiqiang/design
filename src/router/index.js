@@ -22,6 +22,9 @@ import Hadd from '../views/Help/Hadd.vue'
 import Hmanage from '../views/Help/Hmanage.vue'
 import Hchat from '../views/Help/Hchat.vue'
 import Hchat_detail from '../views/Help/Hchat_detail.vue'
+import h_modify from '../views/Help/Modify.vue'
+import h_order from '../views/Help/Order.vue'
+import g_detail from '../views/Help/Get_detail.vue'
 
 //活动页面
 import Aindex from '../views/Activity/Index.vue'
@@ -96,7 +99,6 @@ Vue.use(VueRouter)
       },
       {
         path:'add',
-        name: 'add',
         component:Add
       },
       {
@@ -135,8 +137,20 @@ Vue.use(VueRouter)
     children:[
       {
         path:'index',
-        name: 'Hindex',
         component:Hindex
+      },
+      {
+        path:'g_detail',
+        component:g_detail
+      },
+      {
+        path:'modify',
+       
+        component:h_modify
+      },
+      {
+        path:'order',
+        component:h_order
       },
       {
         path:'get',
