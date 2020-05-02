@@ -9,18 +9,18 @@
         </van-dropdown-item>
     </van-dropdown-menu>
     <div> 
-        <div class='message' @click='skip'>
+        <div class='message' @click='skip' v-for='(item,index) in list' :key='index'>
             <van-image
             width='50px' height='50px' radius='25px' fit="fill"
-            :src="require('../../assets/goods/test1.jpg')"
+            :src="item.ava"
             />
             <div class='info'>
                 <div style='display:flex;justify-content: space-between;font-weight: bold;font-size: 18px;margin-top:-15px'>
-                  <p>姓名</p>
-                  <p>php开发</p>
+                  <p>{{item.name}}</p>
+                  <p>{{item.pos}}</p>
                 </div>
                 
-                <p style='color:gray;font-size: 12px;margin-top:-10px'>2019-10-05</p>
+                <p style='color:gray;font-size: 12px;margin-top:-10px'>{{item.time}}</p>
             </div>
             <p style='margin-left:30px;color:red;font-size:20px'><van-button type="primary" size='small'>查看简历</van-button></p>
         </div>
@@ -60,6 +60,11 @@
       name:'r_resume',
       data() {
         return {
+          list:[
+            {'name':'Suzuki','ava':require('../../assets/goods/h6.jpeg'),'time':'2020-07-05','pos':'Java工程师'},
+            {'name':'Ducati','ava':require('../../assets/goods/h5.jpeg'),'time':'2020-07-05','pos':'Web前端'},
+            {'name':'啦啦啦','ava':require('../../assets/goods/h4.jpeg'),'time':'2020-07-05','pos':'Php工程师'},
+          ],
           value: 0,
           switch1: false,
           switch2: false,

@@ -25,7 +25,7 @@
             </div>
         </div>
 
-        <div class="aui-flex aui-color-back">
+        <!-- <div class="aui-flex aui-color-back">
             <div class="aui-item-info">
                 <span>
                     <i><img src="../../assets/recruit/time.png" alt=""></i>
@@ -35,7 +35,7 @@
             <div class="aui-flex-box">
                 <span>该职位为急聘职位，你可以点击下方一键投递直接发送简历 </span>
             </div>
-        </div>
+        </div> -->
 
 
         <div class="aui-flex b-line">
@@ -122,7 +122,7 @@
         
     </section>
     <footer class="aui-footer-button aui-footer-flex aui-footer-fixed">
-        <div class="aui-footer-wrap">
+        <div class="aui-footer-wrap" @click='delivery'>
             <span>一键投递</span>
         </div>
 
@@ -143,6 +143,7 @@
 </style>
 
 <script type="text/javascript">
+import {Toast} from 'vant'
 export default{
     name:'r_detail',
     data(){
@@ -153,6 +154,9 @@ export default{
     methods:{
         comunicate(){
             this.$router.push('/recruit/comunicate')
+        },
+        delivery(){
+            Toast('投递成功')
         }
     }
 }

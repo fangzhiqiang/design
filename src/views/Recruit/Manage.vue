@@ -104,30 +104,29 @@
         name:'r_manage',
         data(){
             return{
-              pos_list:[
-                    {title:'PHP开发',salary:'6-10k',company:'阿里巴巴',people:'200-9999',status:'已上市',ava:require('../../assets/goods/test1.jpg'),nickname:'jhon',address:'杭州','time':'2019-10-51',
+                pos_list:[
+                    {title:'Java工程师',salary:'10-15k',company:'阿里巴巴',people:'200-9999',status:'已上市',ava:require('../../assets/goods/h4.jpeg'),nickname:'马云',address:'杭州','time':'2020-05-03',
                     tag_list:[
-                        {name:'标签',type:'primary'},
-                        {name:'标4签45',type:'success'},
-                        {name:'45标签',type:'warning'},
-                        {name:'标签',type:'danger'},
-                        {name:'标签',type:'primary'},
+                        {name:'经验不限',type:'primary'},
+                        {name:'学历不限',type:'success'},
+                        {name:'后端',type:'warning'},
+                        {name:'J2EE',type:'danger'},
                     ]},
-                    {title:'PHP开发',salary:'6-10k',company:'阿里巴巴',people:'200-9999',status:'已上市',ava:require('../../assets/goods/test1.jpg'),nickname:'jhon',address:'杭州','time':'2019-10-51',
+                    {title:'Web前端',salary:'6-10k',company:'Tencent',people:'200-9999',status:'已上市',ava:require('../../assets/goods/h3.jpeg'),nickname:'马化腾',address:'深圳','time':'2020-02-02',
                     tag_list:[
-                        {name:'标签',type:'primary'},
-                        {name:'标4签45',type:'success'},
-                        {name:'45标签',type:'warning'},
-                        {name:'标签',type:'danger'},
-                        {name:'标签',type:'primary'},
+                        {name:'Vue',type:'primary'},
+                        {name:'React',type:'success'},
+                        {name:'技术栈',type:'warning'},
+                        {name:'Jquery',type:'danger'},
+                        
                     ]},
-                    {title:'PHP开发',salary:'6-10k',company:'阿里巴巴',people:'200-9999',status:'已上市',ava:require('../../assets/goods/test1.jpg'),nickname:'jhon',address:'杭州','time':'2019-10-51',
+                    {title:'PHP开发',salary:'3-7k',company:'百度',people:'200-9999',status:'已上市',ava:require('../../assets/goods/h9.jpeg'),nickname:'李彦宏',address:'杭州',time:'2019-12-06',
                     tag_list:[
-                        {name:'标签',type:'primary'},
-                        {name:'标4签45',type:'success'},
-                        {name:'45标签',type:'warning'},
-                        {name:'标签',type:'danger'},
-                        {name:'标签',type:'primary'},
+                        {name:'ThinkPhp',type:'primary'},
+                        {name:'Mysql',type:'success'},
+                        {name:'Apache',type:'warning'},
+                        {name:'Swoole',type:'danger'},
+                        
                     ]},
                 ],
             }

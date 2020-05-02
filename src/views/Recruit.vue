@@ -10,8 +10,7 @@
           <van-tab title="首页" to='/recruit/index'></van-tab>
           <van-tab title="发布" to='/recruit/add'></van-tab>
           <van-tab title='管理' ><Menu v-if='show' :list='list' @changeShow='changeShow'></Menu></van-tab>
-          <van-tab title="订单" to='/recruit/order'></van-tab>
-          <van-tab title="留言" to='/recruit/chat'></van-tab>
+         
         </van-tabs>
     </div>
     <div style='margin-bottom: 60px;background-color: #f4f4f4 '>
@@ -37,6 +36,8 @@ import Menu from "./Public/Menu.vue"
                 list:[
                     {name:'找招聘信息管理',to:'/recruit/manage'},
                     {name:'学生简历管理',to:'/recruit/resume'},
+                    {name:'咨询信息管理',to:'/recruit/chat'},
+                    {name:'我的投递',to:'/recruit/index'},
                 ]
             }
         },

@@ -78,9 +78,9 @@
     </div>
 <van-popup v-model="show" position="bottom" :style="{ height: '35%'}">
     <van-cell-group style='margin-top:20px'>
-        <van-field v-model="value" label='姓名' placeholder="请输入姓名" />
+        <van-field  label='姓名' placeholder="请输入姓名" />
         <van-field
-        v-model="sms"
+        
         center
         clearable
         label="手机号"

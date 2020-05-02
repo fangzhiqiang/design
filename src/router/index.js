@@ -47,10 +47,15 @@ import r_add from '../views/Recruit/Add.vue'
 import r_manage from '../views/Recruit/Manage.vue'
 import r_resume from '../views/Recruit/Resume.vue'
 import resume_detail from '../views/Recruit/Resume_detail.vue'
+import c_chat from '../views/Recruit/Chat.vue'
+import c_chat_detail from '../views/Recruit/Chat_detail.vue'
 
 
 //
+import my from '../views/My.vue'
 import m_index from '../views/My/Index.vue'
+import m_info from '../views/My/Info.vue'
+import m_charge from '../views/My/Charge.vue'
 
 
 
@@ -58,7 +63,7 @@ Vue.use(VueRouter)
   const routes = [
   {
     path: '/',
-    name: 'goods',
+    
     component: Goods,
     
   },
@@ -256,6 +261,14 @@ Vue.use(VueRouter)
         component:r_index,
       },
       {
+        path:'chat',
+        component:c_chat,
+      },
+      {
+        path:'chat_detail',
+        component:c_chat_detail,
+      },
+      {
         path:'detail',
         name: 'r_detail',
         component:r_detail,
@@ -284,20 +297,26 @@ Vue.use(VueRouter)
   },
   {
     path:'/my',
-    component:m_index,
-    name: 'm_index',
+    component:my,
     children:[
       {
         path:'index',
-        name: 'm_index',
         component:m_index,
-      }
+      },
+      {
+        path:'info',
+        component:m_info,
+      },
+      {
+        path:'charge',
+        component:m_charge,
+      },
     ]
   }
 ]
 
 const router = new VueRouter({
-  mode: 'hash',
+  mode: 'history',
   base: process.env.BASE_URL,
   routes
 })

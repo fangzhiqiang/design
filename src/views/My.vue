@@ -1,5 +1,10 @@
 <template>
   <div >
+    <van-nav-bar  @click-left="onClickLeft" style='background-color: #f4f4f4;'
+    :title="title"
+    left-text="返回"
+    left-arrow
+    />
     <div style='margin-bottom: 60px;background-color: #f4f4f4 '>
         <keep-alive><router-view /></keep-alive>
     </div>
@@ -41,13 +46,5 @@ import Menu from "./Public/Menu.vue"
                 this.show=value;
             }
         }
-    }
-    /*window.onscroll = function () {
-        // 获取窗口滚动的距离
-        var scrolDis = document.documentElement.scrollTop || document.body.scrollTop;
-        if(scrolDis=='50'){
-            
-        }
-    };*/
-    
+    }  
 </script>

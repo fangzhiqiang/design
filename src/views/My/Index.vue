@@ -1,16 +1,12 @@
 <template>
 <div>
-<van-nav-bar  @click-left="onClickLeft" style='background-color: #f4f4f4;'
-    :title="title"
-    left-text="返回"
-    left-arrow
-    />
+
 <section class="aui-flexView">
     <section class="aui-scrollView">
         <div class="aui-take-head">
             <div class="aui-flex aui-flex-one">
                 <div class="aui-take-user">
-                    <img src="../../assets/my/user.png" alt="">
+                    <img src="../../assets/goods/h6.jpeg" alt="">
                 </div>
                 <div class="aui-flex-box">
                     <h2>我的名字</h2>
@@ -19,7 +15,7 @@
                     </span>
                 </div>
                 <div class="aui-take-button">
-                    <button>修改信息</button>
+                    <button @click.stop="skip('/my/info')">修改信息</button>
                 </div>
             </div>
             <div class="aui-flex aui-flex-two">
@@ -27,7 +23,7 @@
                     <h3>积分充值现在8折起!</h3>
                 </div>
                 <div class="aui-go-button">
-                    <button>立即充值</button>
+                    <button @click.stop="skip('/my/charge')">立即充值</button>
                 </div>
             </div>
 
@@ -46,7 +42,7 @@
         <div class="aui-take-item">
             <div class="aui-flex" style="padding-bottom:0">
                 <div class="aui-flex-box">
-                    <h1>我的订单</h1>
+                    <h1>我的事务</h1>
                 </div>
                 <div class="aui-arrow">
                     <span>查看全部订单</span>
@@ -58,7 +54,7 @@
                         <img src="../../assets/my/nav-001.png" alt="">
                     </div>
                     <div class="aui-palace-grid-text">
-                        <h2>待支付</h2>
+                        <h2>订单</h2>
                     </div>
                 </a>
                 <a href="javascript:;" class="aui-palace-grid">
@@ -66,7 +62,7 @@
                         <img src="../../assets/my/nav-002.png" alt="">
                     </div>
                     <div class="aui-palace-grid-text">
-                        <h2>待收货</h2>
+                        <h2>任务</h2>
                     </div>
                 </a>
                 <a href="javascript:;" class="aui-palace-grid">
@@ -74,7 +70,7 @@
                         <img src="../../assets/my/nav-003.png" alt="">
                     </div>
                     <div class="aui-palace-grid-text">
-                        <h2>待评价</h2>
+                        <h2>奖品</h2>
                     </div>
                 </a>
                 <a href="javascript:;" class="aui-palace-grid">
@@ -82,7 +78,7 @@
                         <img src="../../assets/my/nav-004.png" alt="">
                     </div>
                     <div class="aui-palace-grid-text">
-                        <h2>售后</h2>
+                        <h2>投递</h2>
                     </div>
                 </a>
             </div>
@@ -101,30 +97,52 @@
                     <div style='font-weight: bold;font-size: 1.17em'>我的发布</div>
                   </template>
                   <van-cell title="二手商品信息"   >
-                      <span style='font-size:20px;font-weight: bold;'>></span>
+                      <span style='font-size:16px;font-weight: bold;'>></span>
                   </van-cell>
                   <van-divider />
 
                   <van-cell title="学生互助信息"   >
-                      <span style='font-size:20px;font-weight: bold;'>></span>
+                      <span style='font-size:16px;font-weight: bold;'>></span>
                   </van-cell>
                   <van-divider />
                 
                   <van-cell title="社团活动信息"   >
-                      <span style='font-size:20px;font-weight: bold;'>></span>
+                      <span style='font-size:16px;font-weight: bold;'>></span>
                   </van-cell>
                   <van-divider />
 
                    <van-cell title="招聘信息"   >
-                      <span style='font-size:20px;font-weight: bold;'>></span>
+                      <span style='font-size:16px;font-weight: bold;'>></span>
+                  </van-cell>
+                  <van-divider />     
+                </van-collapse-item>
+            </van-collapse>
+            <van-collapse v-model="activeName" accordion>
+              <van-collapse-item  name="2">
+                  <template #title>
+                    <div style='font-weight: bold;font-size: 1.17em'>积分管理</div>
+                  </template>
+                  <van-cell title="二手商品信息"   >
+                      <span style='font-size:16px;font-weight: bold;'>></span>
                   </van-cell>
                   <van-divider />
-                  
+
+                  <van-cell title="学生互助信息"   >
+                      <span style='font-size:16px;font-weight: bold;'>></span>
+                  </van-cell>
+                  <van-divider />
                 
-                  
-                 
-              </van-collapse-item>
-          </van-collapse>
+                  <van-cell title="社团活动信息"   >
+                      <span style='font-size:16px;font-weight: bold;'>></span>
+                  </van-cell>
+                  <van-divider />
+
+                   <van-cell title="招聘信息"   >
+                      <span style='font-size:16px;font-weight: bold;'>></span>
+                  </van-cell>
+                  <van-divider />     
+                </van-collapse-item>
+            </van-collapse>
           <van-divider />
           <van-cell style='font-size:16px;font-weight: bold;padding:10px 16px 10px 16px' title="单元格" is-link />
           <van-divider />
@@ -237,7 +255,11 @@
         },
         methods:{
             onClickLeft(){
+                //this.$router.push('/my/index')
                 this.$router.go(-1)
+            },
+            skip(url){
+                this.$router.push(url)
             }
         }
     }

@@ -2,7 +2,7 @@
     <div id='menu'>
         <van-popup :close-on-click-overlay='close' :overlay-style="overlay_style" v-model="show" position="top" >
             <van-cell-group>
-                <van-cell  size='large' v-for='(item,index) in list' :key='index' :title="item.name" @click="skip(item.to)"  value="内容" />
+                <van-cell  size='large' v-for='(item,index) in list' :key='index' :title="item.name" @click="skip(item.to)"   />
           </van-cell-group>
       </van-popup>
       
