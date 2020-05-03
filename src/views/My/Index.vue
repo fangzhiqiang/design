@@ -44,38 +44,36 @@
                 <div class="aui-flex-box">
                     <h1>我的事务</h1>
                 </div>
-                <div class="aui-arrow">
-                    <span>查看全部订单</span>
-                </div>
+                
             </div>
             <div class="aui-palace">
-                <a href="javascript:;" class="aui-palace-grid">
+                <router-link to='/goods/order' class="aui-palace-grid">
                     <div class="aui-palace-grid-icon">
-                        <img src="../../assets/my/nav-001.png" alt="">
+                        <img src="../../assets/my/o.png" alt="">
                     </div>
                     <div class="aui-palace-grid-text">
                         <h2>订单</h2>
                     </div>
-                </a>
-                <a href="javascript:;" class="aui-palace-grid">
+                </router-link>
+                <router-link to='/help/get' class="aui-palace-grid">
                     <div class="aui-palace-grid-icon">
-                        <img src="../../assets/my/nav-002.png" alt="">
+                        <img style='width:30px' src="../../assets/my/t.png" alt="">
                     </div>
                     <div class="aui-palace-grid-text">
                         <h2>任务</h2>
                     </div>
-                </a>
+                </router-link>
                 <a href="javascript:;" class="aui-palace-grid">
                     <div class="aui-palace-grid-icon">
-                        <img src="../../assets/my/nav-003.png" alt="">
+                        <img src="../../assets/my/l.png" alt="">
                     </div>
                     <div class="aui-palace-grid-text">
                         <h2>奖品</h2>
                     </div>
                 </a>
-                <a href="javascript:;" class="aui-palace-grid">
+                <a class="aui-palace-grid">
                     <div class="aui-palace-grid-icon">
-                        <img src="../../assets/my/nav-004.png" alt="">
+                        <img src="../../assets/my/r.png" alt="">
                     </div>
                     <div class="aui-palace-grid-text">
                         <h2>投递</h2>
@@ -84,11 +82,11 @@
             </div>
         </div>
 
-        <div class="aui-flex aui-flex-fore">
+        <!-- <div class="aui-flex aui-flex-fore">
             <div class="aui-flex-box">
                 <img src="../../assets/my/ad-001.png" alt="">
             </div>
-        </div>
+        </div> -->
 
         <div style='padding-left:16px;padding-right: 16px'>
             <van-collapse v-model="activeName" accordion>
@@ -96,57 +94,56 @@
                   <template #title>
                     <div style='font-weight: bold;font-size: 1.17em'>我的发布</div>
                   </template>
-                  <van-cell title="二手商品信息"   >
+                  <van-cell title="二手商品信息"  to='/goods/manage'>
                       <span style='font-size:16px;font-weight: bold;'>></span>
                   </van-cell>
                   <van-divider />
 
-                  <van-cell title="学生互助信息"   >
+                  <van-cell title="学生互助信息"   to='/help/manage'>
                       <span style='font-size:16px;font-weight: bold;'>></span>
                   </van-cell>
                   <van-divider />
                 
-                  <van-cell title="社团活动信息"   >
+                  <van-cell title="社团活动信息"   to='/activity/manage'>
                       <span style='font-size:16px;font-weight: bold;'>></span>
                   </van-cell>
                   <van-divider />
 
-                   <van-cell title="招聘信息"   >
+                   <van-cell title="招聘信息"  to='/recruit/manage' >
                       <span style='font-size:16px;font-weight: bold;'>></span>
                   </van-cell>
                   <van-divider />     
                 </van-collapse-item>
             </van-collapse>
+
             <van-collapse v-model="activeName" accordion>
               <van-collapse-item  name="2">
                   <template #title>
                     <div style='font-weight: bold;font-size: 1.17em'>积分管理</div>
                   </template>
-                  <van-cell title="二手商品信息"   >
+                  <van-cell title="积分充值"   to='/my/charge'>
                       <span style='font-size:16px;font-weight: bold;'>></span>
                   </van-cell>
                   <van-divider />
 
-                  <van-cell title="学生互助信息"   >
+                  <van-cell title="积分兑换"  to='/my/exchange'>
                       <span style='font-size:16px;font-weight: bold;'>></span>
                   </van-cell>
                   <van-divider />
                 
-                  <van-cell title="社团活动信息"   >
+                  <van-cell title="积分抽奖"  to='/my/luck' >
                       <span style='font-size:16px;font-weight: bold;'>></span>
                   </van-cell>
                   <van-divider />
 
-                   <van-cell title="招聘信息"   >
-                      <span style='font-size:16px;font-weight: bold;'>></span>
-                  </van-cell>
                   <van-divider />     
                 </van-collapse-item>
             </van-collapse>
+
           <van-divider />
-          <van-cell style='font-size:16px;font-weight: bold;padding:10px 16px 10px 16px' title="单元格" is-link />
+          <van-cell to='/my/info' style='font-size:16px;font-weight: bold;padding:10px 16px 10px 16px' title="个人信息" is-link />
           <van-divider />
-          <van-cell style='font-size:16px;font-weight: bold;padding:10px 16px 10px 16px' title="单元格" is-link />
+          <van-cell to='/goods/chat' style='font-size:16px;font-weight: bold;padding:10px 16px 10px 16px' title="聊天信息" is-link />
           <van-divider />
          
         </div>
@@ -162,55 +159,34 @@
             <div class="aui-palace">
                 <a href="javascript:;" class="aui-palace-grid">
                     <div class="aui-palace-grid-icon">
-                        <img src="../../assets/my/nav-005.png" alt="">
+                        <img src="../../assets/my/re.png" alt="">
                     </div>
                     <div class="aui-palace-grid-text">
-                        <h2>我的绿卡</h2>
+                        <h2>浏览记录</h2>
                     </div>
                 </a>
                 <a href="javascript:;" class="aui-palace-grid">
                     <div class="aui-palace-grid-icon">
-                        <img src="../../assets/my/nav-006.png" alt="">
+                        <img src="../../assets/my/ad.png" alt="">
                     </div>
                     <div class="aui-palace-grid-text">
                         <h2>收货地址</h2>
                     </div>
                 </a>
+                
                 <a href="javascript:;" class="aui-palace-grid">
                     <div class="aui-palace-grid-icon">
-                        <img src="../../assets/my/nav-007.png" alt="">
-                    </div>
-                    <div class="aui-palace-grid-text">
-                        <h2>邀请有礼</h2>
-                    </div>
-                </a>
-                <a href="javascript:;" class="aui-palace-grid">
-                    <div class="aui-palace-grid-icon">
-                        <img src="../../assets/my/nav-008.png" alt="">
+                        <img src="../../assets/my/rep.png" alt="">
                     </div>
                     <div class="aui-palace-grid-text">
                         <h2>联系客服</h2>
                     </div>
                 </a>
+                
+                
                 <a href="javascript:;" class="aui-palace-grid">
                     <div class="aui-palace-grid-icon">
-                        <img src="../../assets/my/nav-009.png" alt="">
-                    </div>
-                    <div class="aui-palace-grid-text">
-                        <h2>礼品卡</h2>
-                    </div>
-                </a>
-                <a href="javascript:;" class="aui-palace-grid">
-                    <div class="aui-palace-grid-icon">
-                        <img src="../../assets/my/nav-010.png" alt="">
-                    </div>
-                    <div class="aui-palace-grid-text">
-                        <h2>扫一扫</h2>
-                    </div>
-                </a>
-                <a href="javascript:;" class="aui-palace-grid">
-                    <div class="aui-palace-grid-icon">
-                        <img src="../../assets/my/nav-011.png" alt="">
+                        <img src="../../assets/my/ba.png" alt="">
                     </div>
                     <div class="aui-palace-grid-text">
                         <h2>意见反馈</h2>
@@ -218,20 +194,13 @@
                 </a>
                 <a href="javascript:;" class="aui-palace-grid">
                     <div class="aui-palace-grid-icon">
-                        <img src="../../assets/my/nav-012.png" alt="">
+                        <img src="../../assets/my/set.png" alt="">
                     </div>
                     <div class="aui-palace-grid-text">
                         <h2>设置</h2>
                     </div>
                 </a>
-                <a href="javascript:;" class="aui-palace-grid">
-                    <div class="aui-palace-grid-icon">
-                        <img src="../../assets/my/nav-013.png" alt="">
-                    </div>
-                    <div class="aui-palace-grid-text">
-                        <h2>企业采购</h2>
-                    </div>
-                </a>
+                
             </div>
         </div>
         <div style="height:50px;"></div>
@@ -243,7 +212,9 @@
 </div>
 </template>
 
-<style src='../../assets/my/style.css' scoped></style>
+<style src='../../assets/my/style.css' scoped>
+
+</style>
 <script type="text/javascript">
     export default{
         name:'m_index',

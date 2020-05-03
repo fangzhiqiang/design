@@ -2,11 +2,11 @@
 
   <div style='height: 80vh;background-color: white;padding-top:10px'>
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
-    <van-panel  title="校园十佳歌手活动抽奖" desc="获奖后请凭获奖界面到学生活动中心领取奖品" :status="status">
+    <van-panel title="系统积分抽奖活动" desc="一次抽奖消耗10积分" :status="status">
       <div v-if='result' style="padding-left: 15px">我的奖品： {{result}}</div>
     </van-panel>
 
-    <div style='position:absolute;top:380px;left:50%'>
+    <div style='position:absolute;top:320px;left:50%'>
       <nut-luckdraw
       class="drawTable"
       ref="luckDrawPrize"

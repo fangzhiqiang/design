@@ -56,6 +56,8 @@ import my from '../views/My.vue'
 import m_index from '../views/My/Index.vue'
 import m_info from '../views/My/Info.vue'
 import m_charge from '../views/My/Charge.vue'
+import m_luck from '../views/My/Luck.vue'
+import m_exchange from '../views/My/Exchange.vue'
 
 
 
@@ -302,6 +304,14 @@ Vue.use(VueRouter)
       {
         path:'index',
         component:m_index,
+      },
+      {
+        path:'exchange',
+        component:m_exchange,
+      },
+      {
+        path:'luck',
+        component:m_luck,
       },
       {
         path:'info',
