@@ -1,4 +1,4 @@
-<template>
+﻿<template>
     <div>
         <van-dropdown-menu>
             <van-dropdown-item title="选择地区" ref="address">
@@ -22,7 +22,7 @@
                     <van-tag plain size='large' v-for='(item,index) in education' :key='index'>{{item}}</van-tag>
 
                 </div>
-                <van-button round type="info" block style='margin:auto;margin-top:20px;width:80%;margin-bottom: 40px' color='#6983aa' @click='hide'>同意买家退款</van-button>
+                <van-button round type="info" block style='margin:auto;margin-top:20px;width:80%;margin-bottom: 40px' color='#6983aa' @click='hide'>筛选</van-button>
             </van-dropdown-item>
         </van-dropdown-menu>
 
